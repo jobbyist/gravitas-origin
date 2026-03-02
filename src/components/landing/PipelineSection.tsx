@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const items = [
   {
@@ -17,6 +18,7 @@ const items = [
 
 const PipelineSection = () => (
   <section className="py-16 px-5 grid-bg">
+    <ScrollFadeIn delay={0.25}>
     <div className="max-w-lg mx-auto">
       <h2 className="text-2xl font-extrabold text-foreground mb-2">
         Seamless Deployment Pipeline
@@ -47,6 +49,7 @@ const PipelineSection = () => (
         ))}
       </div>
     </div>
+    </ScrollFadeIn>
   </section>
 );
 

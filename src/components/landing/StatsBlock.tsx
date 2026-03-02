@@ -1,3 +1,5 @@
+import ScrollFadeIn from "./ScrollFadeIn";
+
 const stats = [
   { value: "10x", label: "FASTER DEVELOPMENT" },
   { value: "5.2", label: "MODEL VERSION" },
@@ -7,6 +9,7 @@ const stats = [
 
 const StatsBlock = () => (
   <section className="py-12 px-5">
+    <ScrollFadeIn delay={0.2}>
     <div className="max-w-sm mx-auto divide-y divide-border">
       {stats.map((s) => (
         <div key={s.label} className="py-5 text-center">
@@ -19,6 +22,7 @@ const StatsBlock = () => (
         </div>
       ))}
     </div>
+    </ScrollFadeIn>
   </section>
 );
 

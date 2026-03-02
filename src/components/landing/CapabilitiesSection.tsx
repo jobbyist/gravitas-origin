@@ -1,4 +1,5 @@
 import { Sparkles, Github, Layers, Check } from "lucide-react";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 interface CapCard {
   icon: React.ReactNode;
@@ -32,6 +33,7 @@ const cards: CapCard[] = [
 
 const CapabilitiesSection = () => (
   <section className="py-16 px-5">
+    <ScrollFadeIn delay={0.1}>
     <div className="max-w-lg mx-auto">
       <p className="text-[10px] font-semibold tracking-[0.2em] text-muted-foreground uppercase mb-2">
         Capabilities
@@ -79,6 +81,7 @@ const CapabilitiesSection = () => (
         ))}
       </div>
     </div>
+    </ScrollFadeIn>
   </section>
 );
 

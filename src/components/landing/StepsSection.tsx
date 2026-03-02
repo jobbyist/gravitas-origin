@@ -1,3 +1,5 @@
+import ScrollFadeIn from "./ScrollFadeIn";
+
 const steps = [
   {
     num: 1,
@@ -44,6 +46,7 @@ const codeSnippet = `export const PricingCard = ({ plan }) => {
 
 const StepsSection = () => (
   <section className="py-16 px-5">
+    <ScrollFadeIn delay={0.15}>
     <div className="max-w-lg mx-auto">
       <h2 className="text-2xl font-extrabold text-foreground mb-2">
         Designed for Developers,
@@ -92,6 +95,7 @@ const StepsSection = () => (
         </pre>
       </div>
     </div>
+    </ScrollFadeIn>
   </section>
 );
 

@@ -5,6 +5,7 @@ import CapabilitiesSection from "@/components/landing/CapabilitiesSection";
 import StepsSection from "@/components/landing/StepsSection";
 import ModelsSection from "@/components/landing/ModelsSection";
 import PipelineSection from "@/components/landing/PipelineSection";
+import Footer from "@/components/landing/Footer";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
@@ -15,8 +16,7 @@ const Index = () => (
     <StepsSection />
     <ModelsSection />
     <PipelineSection />
-    {/* Footer spacer */}
-    <div className="h-16" />
+    <Footer />
   </div>
 );
 

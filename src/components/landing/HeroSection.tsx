@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { toast } from "sonner";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const HeroSection = () => {
   const handlePrompt = () => {
@@ -8,6 +9,7 @@ const HeroSection = () => {
 
   return (
     <section className="grid-bg pt-24 pb-16 px-5">
+      <ScrollFadeIn>
       <div className="max-w-lg mx-auto text-center">
         {/* Pill badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary border border-border mb-8">
@@ -53,6 +55,7 @@ const HeroSection = () => {
           View Demo
         </button>
       </div>
+      </ScrollFadeIn>
     </section>
   );
 };

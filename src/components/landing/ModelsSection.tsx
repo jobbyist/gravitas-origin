@@ -1,4 +1,5 @@
 import { Code2, Sparkles, Feather, Braces } from "lucide-react";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 const models = [
   {
@@ -29,6 +30,7 @@ const models = [
 
 const ModelsSection = () => (
   <section className="py-16 px-5">
+    <ScrollFadeIn delay={0.2}>
     <div className="max-w-lg mx-auto text-center">
       <h2 className="text-2xl font-extrabold text-foreground mb-2">
         Powered by Frontier Models
@@ -56,6 +58,7 @@ const ModelsSection = () => (
         ))}
       </div>
     </div>
+    </ScrollFadeIn>
   </section>
 );
 
