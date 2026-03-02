@@ -17,18 +17,18 @@ const items = [
 ];
 
 const PipelineSection = () => (
-  <section className="py-16 px-5 grid-bg">
+  <section id="pipeline" className="py-16 px-5 md:px-6 lg:px-8 grid-bg">
     <ScrollFadeIn delay={0.25}>
-    <div className="max-w-lg mx-auto">
-      <h2 className="text-2xl font-extrabold text-foreground mb-2">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-2xl lg:text-3xl font-extrabold text-foreground mb-2">
         Seamless Deployment Pipeline
       </h2>
-      <p className="text-sm text-muted-foreground mb-8">
+      <p className="text-sm lg:text-base text-muted-foreground mb-8 max-w-2xl">
         Don't just generate code snippets. Gravitas Origin integrates directly
         with your production environment.
       </p>
 
-      <div className="space-y-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
         {items.map((it) => (
           <div key={it.title} className="flex gap-3">
             <CheckCircle2
