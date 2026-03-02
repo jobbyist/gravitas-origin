@@ -1,4 +1,5 @@
 import { Sparkles, Github, Layers, Check } from "lucide-react";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 interface CapCard {
   icon: React.ReactNode;
@@ -31,20 +32,21 @@ const cards: CapCard[] = [
 ];
 
 const CapabilitiesSection = () => (
-  <section className="py-16 px-5">
-    <div className="max-w-lg mx-auto">
+  <section id="capabilities" className="py-16 px-5 md:px-6 lg:px-8">
+    <ScrollFadeIn delay={0.1}>
+    <div className="max-w-6xl mx-auto">
       <p className="text-[10px] font-semibold tracking-[0.2em] text-muted-foreground uppercase mb-2">
         Capabilities
       </p>
-      <h2 className="text-2xl font-extrabold text-foreground mb-2">
+      <h2 className="text-2xl lg:text-3xl font-extrabold text-foreground mb-2">
         Everything you need to ship.
       </h2>
-      <p className="text-sm text-muted-foreground mb-8">
+      <p className="text-sm lg:text-base text-muted-foreground mb-8 max-w-2xl">
         From idea to live URL in minutes. Gravitas Origin handles the entire
         stack.
       </p>
 
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         {cards.map((c) => (
           <div
             key={c.title}
@@ -79,6 +81,7 @@ const CapabilitiesSection = () => (
         ))}
       </div>
     </div>
+    </ScrollFadeIn>
   </section>
 );
 
