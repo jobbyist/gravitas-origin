@@ -1,14 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import StickyHeader from "@/components/landing/StickyHeader";
+import HeroSection from "@/components/landing/HeroSection";
+import StatsBlock from "@/components/landing/StatsBlock";
+import CapabilitiesSection from "@/components/landing/CapabilitiesSection";
+import StepsSection from "@/components/landing/StepsSection";
+import ModelsSection from "@/components/landing/ModelsSection";
+import PipelineSection from "@/components/landing/PipelineSection";
 
-const Index = () => {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
-  );
-};
+const Index = () => (
+  <div className="min-h-screen bg-background">
+    <StickyHeader />
+    <HeroSection />
+    <StatsBlock />
+    <CapabilitiesSection />
+    <StepsSection />
+    <ModelsSection />
+    <PipelineSection />
+    {/* Footer spacer */}
+    <div className="h-16" />
+  </div>
+);
 
 export default Index;
