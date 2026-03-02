@@ -57,12 +57,6 @@ const StickyHeader = () => {
         >
           Pipeline
         </button>
-        <button
-          onClick={() => scrollToSection('pricing')}
-          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          Pricing
-        </button>
       </nav>
 
       {/* Right: Actions */}
