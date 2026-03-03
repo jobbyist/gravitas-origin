@@ -5,26 +5,26 @@ const models = [
   {
     icon: <Code2 size={18} className="text-primary-foreground" />,
     bg: "bg-primary",
-    name: "GPT-4 Codex",
-    sub: "UX Pilot AI",
+    name: "GPT-5.2 Thinking",
+    sub: "OpenAI",
   },
   {
     icon: <Sparkles size={18} className="text-primary-foreground" />,
     bg: "bg-[hsl(270_60%_55%)]",
-    name: "Gemini 2.5",
-    sub: "Google DeepMind",
+    name: "Gemini 3 Pro",
+    sub: "Google AI Studio",
   },
   {
     icon: <Feather size={18} className="text-primary-foreground" />,
     bg: "bg-[hsl(25_90%_55%)]",
-    name: "UX Pilot 3.5 Sonnet",
-    sub: "UX Pilot AI",
+    name: "Claude Code",
+    sub: "by Anthropic",
   },
   {
     icon: <Braces size={18} className="text-primary-foreground" />,
     bg: "bg-[hsl(210_80%_50%)]",
-    name: "Gravitas 5.2",
-    sub: "Proprietary",
+    name: "Origin v1.0",
+    sub: "by Gravitas",
   },
 ];
 
@@ -33,10 +33,10 @@ const ModelsSection = () => (
     <ScrollFadeIn delay={0.2}>
     <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-2xl lg:text-3xl font-extrabold text-foreground mb-2">
-        Powered by Frontier Models
+        Powered by Frontier AI Agentic Models
       </h2>
       <p className="text-sm lg:text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
-        We aggregate the best AI models to ensure optimal code generation.
+        We aggregate the best AI models with advanced reasoning and coding capabilities to ensure optimal code generation.
       </p>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
