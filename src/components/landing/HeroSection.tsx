@@ -133,12 +133,14 @@ const HeroSection = () => {
             </div>
 
             {/* Generate website idea button */}
-            <button 
-              onClick={generateRandomPrompt}
-              className="w-full h-11 rounded-xl border border-border bg-background text-sm font-medium text-foreground hover:bg-secondary transition-colors active:scale-[0.98]"
-            >
-              Generate a website idea/prompt
-            </button>
+            <div className="relative w-full rounded-xl p-[2px] bg-gradient-to-r from-[#0ea5e9] via-[#22c55e] to-[#0ea5e9] bg-[length:200%_100%] animate-[gradient-flow_3s_linear_infinite]">
+              <button 
+                onClick={generateRandomPrompt}
+                className="w-full h-11 rounded-xl bg-background text-sm font-medium text-foreground hover:bg-secondary transition-colors active:scale-[0.98]"
+              >
+                Generate a website idea/prompt
+              </button>
+            </div>
 
             {/* Early access link */}
             <button

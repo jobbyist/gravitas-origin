@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Eye, Box } from "lucide-react";
+import { Eye } from "lucide-react";
 import VideoModal from "./VideoModal";
 
 const StickyHeader = () => {
@@ -31,12 +31,16 @@ const StickyHeader = () => {
     >
       {/* Left: logo */}
       <div className="flex items-center gap-2.5">
-        <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-          <Box className="text-primary-foreground" size={16} strokeWidth={2.5} />
-        </div>
-        <span className="text-sm font-semibold text-foreground tracking-tight">
-          Gravitas Origin
-        </span>
+        <img 
+          src="/origininverted.png" 
+          alt="Origin by Gravitas" 
+          className="w-[150px] h-auto dark:hidden"
+        />
+        <img 
+          src="/origin.png" 
+          alt="Origin by Gravitas" 
+          className="w-[150px] h-auto hidden dark:block"
+        />
       </div>
 
       {/* Center: Navigation (hidden on mobile) */}

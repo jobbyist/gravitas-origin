@@ -6,6 +6,20 @@ const Footer = () => {
     <footer className="py-16 px-5 md:px-6 lg:px-8 border-t border-border bg-background">
       <ScrollFadeIn delay={0.1}>
         <div className="max-w-6xl mx-auto">
+          {/* Logo */}
+          <div className="flex justify-center mb-8">
+            <img 
+              src="/originblk.png" 
+              alt="Origin by Gravitas" 
+              className="w-[150px] h-auto dark:hidden"
+            />
+            <img 
+              src="/originwht.png" 
+              alt="Origin by Gravitas" 
+              className="w-[150px] h-auto hidden dark:block"
+            />
+          </div>
+
           {/* Prototype Notice */}
           <div className="mb-8 p-4 md:p-6 rounded-xl bg-secondary border border-border">
             <p className="text-xs md:text-sm text-muted-foreground leading-relaxed text-center">
