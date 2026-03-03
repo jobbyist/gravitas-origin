@@ -26,7 +26,7 @@ const Chat = () => {
 
   const handleSendMessage = (content: string) => {
     const userMessage: Message = {
-      id: Date.now().toString(),
+      id: crypto.randomUUID(),
       role: "user",
       content,
       timestamp: new Date(),
@@ -38,7 +38,7 @@ const Chat = () => {
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
-        id: (Date.now() + 1).toString(),
+        id: crypto.randomUUID(),
         role: "assistant",
         content: "I understand. Let me help you with that. This is a demo response showing the chat interface in action.",
         timestamp: new Date(),

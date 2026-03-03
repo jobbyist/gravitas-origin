@@ -30,11 +30,11 @@ const ChatInput = ({ onSend }: ChatInputProps) => {
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={handleKeyDown}
         placeholder="Describe what you want to build..."
-        className="min-h-[52px] pr-14 resize-none border-foreground dark:border-background"
+        className="min-h-[52px] pr-14 resize-none border-border"
         style={{
           fontFamily: "'Montserrat', sans-serif",
           fontSize: "16px",
-          borderRadius: "1.5px",
+          borderRadius: "12px",
           borderWidth: "1.5px",
         }}
       />
