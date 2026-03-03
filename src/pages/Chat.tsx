@@ -53,7 +53,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background light-mode-gradient dark:dark-mode-gradient flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col">
       <ChatHeader />
       <div className="flex-1 flex flex-col max-w-5xl w-full mx-auto px-4 md:px-6 lg:px-8">
         <ChatWindow messages={messages} />
