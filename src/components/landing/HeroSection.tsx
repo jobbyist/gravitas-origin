@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import ScrollFadeIn from "./ScrollFadeIn";
+import { useState } from "react";
 
 const codeExample = `// Generated React component
 import { Card } from "@/components/ui/card";
@@ -31,12 +32,52 @@ export function PricingCard({ plan }) {
   );
 }`;
 
+const websitePrompts = [
+  "Build a landing page for a coffee shop with online ordering",
+  "Create a portfolio website for a freelance photographer",
+  "Design a SaaS dashboard for project management",
+  "Build a blog platform with markdown support",
+  "Create an e-commerce store for handmade crafts",
+  "Design a restaurant menu website with reservation system",
+  "Build a fitness tracking app landing page",
+  "Create a real estate listing website",
+  "Design a music streaming service interface",
+  "Build a recipe sharing platform",
+  "Create a booking system for a salon",
+  "Design a cryptocurrency price tracker",
+  "Build a job board for remote positions",
+  "Create a calendar app with event management",
+  "Design a video course platform",
+  "Build a prototype for a fintech platform that helps people invest money in groups",
+  "Create a social media dashboard for analytics",
+  "Design a travel booking website",
+  "Build a pet adoption platform",
+  "Create a gaming community forum",
+  "Crawl my website and help me generate an SEO report",
+  "Build a website wireframe for a tech startup",
+  "Create a landing page with A/B testing capabilities",
+  "Design a subscription box service website",
+  "Build a directory for local businesses",
+  "Create a donation platform for non-profits",
+  "Design a meal planning app interface",
+  "Build a car rental booking system",
+  "Create a virtual event platform",
+  "Design an online tutoring marketplace"
+];
+
 const HeroSection = () => {
   const navigate = useNavigate();
+  const [promptValue, setPromptValue] = useState("Build a landing page for a coffee shop...");
   
   const handlePrompt = () => {
     toast("Opening chat interface...", { duration: 2000 });
     navigate("/chat");
+  };
+
+  const generateRandomPrompt = () => {
+    const randomPrompt = websitePrompts[Math.floor(Math.random() * websitePrompts.length)];
+    setPromptValue(randomPrompt);
+    toast.success("New website idea generated!", { duration: 2000 });
   };
 
   return (
@@ -74,6 +115,8 @@ const HeroSection = () => {
             <div className="relative mb-3">
               <input
                 type="text"
+                value={promptValue}
+                onChange={(e) => setPromptValue(e.target.value)}
                 placeholder="Build a landing page for a coffee shop..."
                 className="w-full h-12 pl-4 pr-14 rounded-xl border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/20"
               />
@@ -85,9 +128,12 @@ const HeroSection = () => {
               </button>
             </div>
 
-            {/* View Demo button */}
-            <button className="w-full h-11 rounded-xl border border-border bg-background text-sm font-medium text-foreground hover:bg-secondary transition-colors active:scale-[0.98]">
-              View Demo
+            {/* Generate website idea button */}
+            <button 
+              onClick={generateRandomPrompt}
+              className="w-full h-11 rounded-xl border border-border bg-background text-sm font-medium text-foreground hover:bg-secondary transition-colors active:scale-[0.98]"
+            >
+              Generate a website idea/prompt
             </button>
           </div>
 
