@@ -27,6 +27,7 @@ const VideoModal = ({ open, onOpenChange }: VideoModalProps) => {
             className="w-full h-full rounded-lg"
             poster="/placeholder.svg"
           >
+            {/* TODO: Upload platform-overview.mp4 to /public/videos/ directory */}
             <source src="/videos/platform-overview.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

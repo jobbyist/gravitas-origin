@@ -51,7 +51,7 @@ const EarlyAccessModal = ({ open, onOpenChange }: EarlyAccessModalProps) => {
 
   const onSubmit = async (values: FormValues) => {
     setIsSubmitting(true);
-    // Simulate API call
+    // TODO: Replace with actual API endpoint when backend is ready
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log("Early access request:", values);
     toast.success("Thank you! You've been added to the waiting list.");

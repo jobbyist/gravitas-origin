@@ -73,7 +73,7 @@ const StickyHeader = () => {
           </button>
         </div>
 
-        {/* Video overview icon */}
+        {/* Video overview icon - visible on all devices */}
         <button
           onClick={() => setVideoModalOpen(true)}
           className={`w-8 h-8 flex items-center justify-center rounded-lg transition-all ${
