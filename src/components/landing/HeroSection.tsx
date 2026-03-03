@@ -65,9 +65,11 @@ const websitePrompts = [
   "Design an online tutoring marketplace"
 ];
 
+const DEFAULT_PROMPT = websitePrompts[0];
+
 const HeroSection = () => {
   const navigate = useNavigate();
-  const [promptValue, setPromptValue] = useState("Build a landing page for a coffee shop...");
+  const [promptValue, setPromptValue] = useState(DEFAULT_PROMPT);
   
   const handlePrompt = () => {
     toast("Opening chat interface...", { duration: 2000 });
@@ -117,7 +119,7 @@ const HeroSection = () => {
                 type="text"
                 value={promptValue}
                 onChange={(e) => setPromptValue(e.target.value)}
-                placeholder="Build a landing page for a coffee shop..."
+                placeholder={DEFAULT_PROMPT}
                 className="w-full h-12 pl-4 pr-14 rounded-xl border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/20"
               />
               <button
