@@ -21,13 +21,13 @@ const QuickActions = ({ onAction }: QuickActionsProps) => {
           <button
             key={action.label}
             onClick={() => onAction(action.prompt)}
-            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-background border border-transparent whitespace-nowrap text-sm hover:bg-secondary transition-colors relative overflow-hidden group"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-background border border-transparent whitespace-nowrap text-xs sm:text-sm hover:bg-secondary transition-colors relative overflow-hidden group flex-shrink-0"
             style={{
               fontFamily: "'Montserrat', sans-serif",
             }}
           >
             <div className="absolute inset-0 rainbow-gradient opacity-30 group-hover:opacity-50 transition-opacity" />
-            <Icon className="w-4 h-4 relative z-10" />
+            <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 relative z-10 flex-shrink-0" />
             <span className="relative z-10">{action.label}</span>
           </button>
         );
