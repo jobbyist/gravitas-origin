@@ -1,4 +1,5 @@
 import ScrollFadeIn from "./ScrollFadeIn";
+import ThemeToggle from "./ThemeToggle";
 
 const Footer = () => {
   return (
@@ -14,28 +15,30 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Legal Links */}
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
+          {/* Systems Status */}
+          <div className="flex justify-center items-center gap-2 mb-6">
+            <div className="relative">
+              <span className="absolute inline-flex h-3 w-3 rounded-full bg-green-500 opacity-75 animate-ping" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500" />
+            </div>
+            <span className="text-xs md:text-sm text-muted-foreground">
+              Systems operational
+            </span>
+          </div>
+
+          {/* Back to Homepage Link */}
+          <div className="flex justify-center mb-6">
             <a
-              href="#privacy"
+              href="https://gravitas.uno"
               className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              Privacy Policy
+              Back To Homepage
             </a>
-            <span className="text-xs md:text-sm text-muted-foreground">•</span>
-            <a
-              href="#terms"
-              className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Terms of Service
-            </a>
-            <span className="text-xs md:text-sm text-muted-foreground">•</span>
-            <a
-              href="#cookies"
-              className="text-xs md:text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Cookie Policy
-            </a>
+          </div>
+
+          {/* Theme Toggle */}
+          <div className="flex justify-center mb-6">
+            <ThemeToggle />
           </div>
 
           {/* Copyright */}

@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { Maximize2, Box } from "lucide-react";
+import { Eye, Box } from "lucide-react";
+import VideoModal from "./VideoModal";
 
 const StickyHeader = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -71,17 +73,20 @@ const StickyHeader = () => {
           </button>
         </div>
 
-        {/* Expand icon (mobile only) */}
+        {/* Video overview icon - visible on all devices */}
         <button
-          className={`md:hidden w-8 h-8 flex items-center justify-center rounded-lg transition-all ${
+          onClick={() => setVideoModalOpen(true)}
+          className={`w-8 h-8 flex items-center justify-center rounded-lg transition-all ${
             scrolled
               ? "bg-background border border-border shadow-sm"
               : "text-foreground/60"
           }`}
+          aria-label="Watch platform overview"
         >
-          <Maximize2 size={14} strokeWidth={2.5} />
+          <Eye size={14} strokeWidth={2.5} />
         </button>
       </div>
+      <VideoModal open={videoModalOpen} onOpenChange={setVideoModalOpen} />
     </header>
   );
 };
