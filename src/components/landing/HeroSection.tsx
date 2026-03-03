@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import ScrollFadeIn from "./ScrollFadeIn";
 import { useState } from "react";
+import EarlyAccessModal from "./EarlyAccessModal";
 
 const codeExample = `// Generated React component
 import { Card } from "@/components/ui/card";
@@ -70,6 +71,7 @@ const DEFAULT_PROMPT = websitePrompts[0];
 const HeroSection = () => {
   const navigate = useNavigate();
   const [promptValue, setPromptValue] = useState(DEFAULT_PROMPT);
+  const [earlyAccessModalOpen, setEarlyAccessModalOpen] = useState(false);
   
   const handlePrompt = () => {
     toast("Opening chat interface...", { duration: 2000 });
@@ -137,6 +139,14 @@ const HeroSection = () => {
             >
               Generate a website idea/prompt
             </button>
+
+            {/* Early access link */}
+            <button
+              onClick={() => setEarlyAccessModalOpen(true)}
+              className="mt-2 text-sm text-primary hover:underline transition-colors"
+            >
+              Join The Early Access Waiting List
+            </button>
           </div>
 
           {/* Right Column: Code Preview (hidden on mobile) */}
@@ -160,6 +170,7 @@ const HeroSection = () => {
         </div>
       </div>
       </ScrollFadeIn>
+      <EarlyAccessModal open={earlyAccessModalOpen} onOpenChange={setEarlyAccessModalOpen} />
     </section>
   );
 };
