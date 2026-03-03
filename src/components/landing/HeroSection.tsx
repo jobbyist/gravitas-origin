@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import ScrollFadeIn from "./ScrollFadeIn";
 
@@ -31,8 +32,11 @@ export function PricingCard({ plan }) {
 }`;
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+  
   const handlePrompt = () => {
-    toast("Demo prompt captured", { duration: 2000 });
+    toast("Opening chat interface...", { duration: 2000 });
+    navigate("/chat");
   };
 
   return (
