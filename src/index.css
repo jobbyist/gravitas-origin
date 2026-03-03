@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
@@ -57,6 +58,57 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 100%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 220 15% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 20%;
+    --border-strong: 0 0% 100%;
+    --input: 220 13% 20%;
+    --ring: 0 0% 100%;
+
+    --green-dot: 142 71% 45%;
+    --green-check: 142 71% 45%;
+
+    --header-bg: 220 15% 12%;
+    --header-shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.3);
+
+    --grid-line: 220 13% 20%;
+
+    --code-bg: 220 15% 15%;
+    --code-fg: 210 40% 96%;
+
+    --sidebar-background: 220 20% 12%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 13% 20%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
 
 @layer base {
@@ -80,5 +132,30 @@
       linear-gradient(to right, hsl(var(--grid-line)) 1px, transparent 1px),
       linear-gradient(to bottom, hsl(var(--grid-line)) 1px, transparent 1px);
     background-size: 40px 40px;
+  }
+
+  .rainbow-gradient {
+    background: linear-gradient(
+      90deg,
+      #ff0000 0%,
+      #ff7f00 14.28%,
+      #ffff00 28.56%,
+      #00ff00 42.84%,
+      #0000ff 57.12%,
+      #4b0082 71.4%,
+      #9400d3 85.68%,
+      #ff0000 100%
+    );
+    background-size: 200% 100%;
+    animation: rainbow-flow 3s linear infinite;
+  }
+
+  @keyframes rainbow-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
   }
 }
