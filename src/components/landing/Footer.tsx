@@ -17,6 +17,7 @@ const Footer = () => {
               src="/originwht.png" 
               alt="Origin by Gravitas" 
               className="w-[150px] h-auto hidden dark:block"
+              aria-hidden="true"
             />
           </div>
 
