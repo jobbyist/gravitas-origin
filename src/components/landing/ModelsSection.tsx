@@ -33,10 +33,10 @@ const ModelsSection = () => (
     <ScrollFadeIn delay={0.2}>
     <div className="max-w-6xl mx-auto text-center">
       <h2 className="text-2xl lg:text-3xl font-extrabold text-foreground mb-2">
-        Powered by Frontier AI Agentic Models
+        Multi-Model AI Orchestration
       </h2>
       <p className="text-sm lg:text-base text-muted-foreground mb-8 max-w-2xl mx-auto">
-        We aggregate the best AI models with advanced reasoning and coding capabilities to ensure optimal code generation.
+        Access top-tier models (Claude, ChatGPT, Gemini) on a transparent credit-based system. Pay only for what you use—no expensive monthly subscriptions.
       </p>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
