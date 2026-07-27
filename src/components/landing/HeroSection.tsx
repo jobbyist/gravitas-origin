@@ -95,24 +95,24 @@ const HeroSection = () => {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary border border-border mb-8">
               <span className="w-2 h-2 rounded-full bg-green-dot" />
               <span className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
-                Powered by UX Pilot 3.5 Sonnet & GPT-4
+                Multi-Model AI Orchestration
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="text-[2.75rem] lg:text-5xl leading-[1.05] font-extrabold tracking-tight mb-5">
-              <span className="text-foreground">Automate Code.</span>
+              <span className="text-foreground">Africa's Leading</span>
               <br />
-              <span className="text-muted-foreground">Accelerate</span>
+              <span className="text-muted-foreground">Vibe Coding</span>
               <br />
-              <span className="text-muted-foreground">Deployment.</span>
+              <span className="text-muted-foreground">Platform.</span>
             </h1>
 
             {/* Subcopy */}
             <p className="text-sm lg:text-base text-muted-foreground leading-relaxed mb-8 max-w-sm mx-auto md:mx-0">
-              Gravitas Origin is the agentic AI coding tool that turns natural
-              language into production-ready websites. Deploy instantly to Vercel &
-              GitHub.
+              Gravitas Origin combines multi-model AI orchestration (Claude, ChatGPT, Gemini)
+              with a transparent credit-based system. Start free with limited credits,
+              then pay-as-you-go from just $10. No $20–$50/month subscriptions.
             </p>
 
             {/* Prompt input */}
@@ -121,6 +121,11 @@ const HeroSection = () => {
                 type="text"
                 value={promptValue}
                 onChange={(e) => setPromptValue(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    handlePrompt();
+                  }
+                }}
                 placeholder={DEFAULT_PROMPT}
                 className="w-full h-12 pl-4 pr-14 rounded-xl border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring/20"
               />

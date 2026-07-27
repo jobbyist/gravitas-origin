@@ -54,8 +54,8 @@ const StepsSection = () => (
         Powered by AI.
       </h2>
       <p className="text-sm lg:text-base text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-        Gravitas Origin isn't just a chatbot. It's a full development
-        environment that understands file structures, dependencies, and
+        Gravitas Origin is a full-featured coding assistant platform that combines
+        natural language processing with multi-model AI. It understands file structures, dependencies, and
         deployment pipelines.
       </p>
 

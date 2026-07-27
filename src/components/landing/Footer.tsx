@@ -30,6 +30,16 @@ const Footer = () => {
             </p>
           </div>
 
+          {/* Geographic Availability Notice */}
+          <div className="mb-8 p-4 md:p-6 rounded-xl bg-secondary border border-border">
+            <p className="text-xs md:text-sm text-muted-foreground leading-relaxed text-center">
+              <strong className="text-foreground">Platform Availability:</strong> Gravitas Origin
+              is currently available in{" "}
+              <span className="text-foreground font-medium">South Africa, Nigeria, and Kenya</span>.
+              Additional regions will be announced soon.
+            </p>
+          </div>
+
           {/* Systems Status */}
           <div className="flex justify-center items-center gap-2 mb-6">
             <div className="relative">

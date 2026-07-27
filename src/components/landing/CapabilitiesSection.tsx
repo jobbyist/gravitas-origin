@@ -1,4 +1,4 @@
-import { Sparkles, Github, Layers, Check } from "lucide-react";
+import { Sparkles, Github, Layers, Check, CreditCard } from "lucide-react";
 import ScrollFadeIn from "./ScrollFadeIn";
 
 interface CapCard {
@@ -13,21 +13,27 @@ const cards: CapCard[] = [
   {
     icon: <Sparkles size={18} />,
     title: "Natural Language Coding",
-    desc: "Describe your website in plain English. Our multi-model agent (UX Pilot, GPT, Gemini) writes semantic, accessible code.",
+    desc: "Describe your web app in plain English. Our multi-model AI orchestration writes production-ready code instantly.",
     bullets: ["React & Tailwind Support", "Semantic HTML5"],
   },
   {
-    icon: <Github size={18} className="text-primary-foreground" />,
-    title: "One-Click Deploy",
-    desc: "Push directly to GitHub repositories and trigger Vercel deployments without leaving the chat interface.",
-    bullets: ["Automated Git Commits", "Live Preview URLs"],
+    icon: <CreditCard size={18} className="text-primary-foreground" />,
+    title: "Transparent Credit System",
+    desc: "No $20–$50/month subscriptions. Start free with limited credits, then pay-as-you-go from just $10.",
+    bullets: ["Free Tier Available", "Pay Only What You Use"],
     featured: true,
   },
   {
     icon: <Layers size={18} />,
     title: "Multi-Model Intelligence",
-    desc: "Leverage the specific strengths of GPT-4, UX Pilot Sonnet 4.5, and Gemini 2.5 for different parts of your codebase.",
+    desc: "Access Claude, ChatGPT, and Gemini—similar to Bolt.new and GitHub Copilot, but with transparent pricing.",
     bullets: ["Smart Model Routing", "Context Awareness"],
+  },
+  {
+    icon: <Github size={18} />,
+    title: "One-Click Deploy",
+    desc: "Push directly to GitHub repositories and trigger Vercel deployments without leaving the chat interface.",
+    bullets: ["Automated Git Commits", "Live Preview URLs"],
   },
 ];
 
@@ -42,15 +48,15 @@ const CapabilitiesSection = () => (
         Everything you need to ship.
       </h2>
       <p className="text-sm lg:text-base text-muted-foreground mb-8 max-w-2xl">
-        From idea to live URL in minutes. Gravitas Origin handles the entire
+        From idea to live URL in minutes with transparent, affordable pricing. Gravitas Origin handles the entire
         stack.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
         {cards.map((c) => (
           <div
             key={c.title}
-            className={`rounded-2xl border p-5 ${
+            className={`rounded-2xl border p-5 h-full ${
               c.featured ? "border-border-strong" : "border-border"
             }`}
           >
